@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Civilian Camo</title>
+<meta name="description" content="Civilian Camo">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="magnific-popup.min.css" />
+<link rel="stylesheet" type="text/css" href="glitch.css" />
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+html {
+    -webkit-font-smoothing: antialiased;
+}
+body {
+    font-family: 'Special Elite', HelveticaNeue-Light, "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    overflow-x: hidden;
+    text-shadow: .5px 0 0 currentColor;
+}
+header, main, footer {
+	position: relative;
+	display: block;
+}
+h1 {
+
+}
+h2 {
+	font-weight: 400;
+	text-transform: uppercase;
+	font-size: 1rem;
+	letter-spacing: 0.5rem;
+	margin-bottom: .25rem;
+	transform: rotate(-.5deg);
+  -webkit-transform: rotate(-.5deg);
+}
+img {
+	display: block;
+}
+a {
+	color: #000;
+	text-decoration: none;
+	display: inline-block;
+}
+
+:focus {
+	outline: 3px solid #888;
+}
+
+a:hover, a:focus {
+	text-decoration: underline;
+}
+.biography {
+	letter-spacing: 0.25rem;
+	line-height: 1.4;
+	max-width: 720px;
+	transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+}
+footer a {
+    color: rgba(0, 0, 0, 1);
+    padding: 5px;
+    display: inline-block;
+    text-decoration: none;
+}
+footer a:hover, footer a:focus {
+    
+    color: rgba(0, 0, 0, 0.8);
+    text-decoration: none;
+}
+footer svg {
+    width: 40px;
+    height: 32px;
+}
+.visually-hidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+}
+ .disabled {
+	 cursor: not-allowed!important;
+}
+ .show {
+	 display: inline-block !important;
+}
+.container {
+	max-width: 720px;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.player {
+	 height: 60px;
+	 margin: 0 auto;
+	 position: relative;
+	 width: 100%;
+	 max-width: 420px;
+	 *zoom: 1;
+}
+/*
+ @media (min-width: 768px) and (max-width: 991px) {
+	  .player {
+		 width: 470px;
+	}
+}
+ @media (min-width: 992px) and (max-width: 1100px) {
+	  .player {
+		 width: 470px;
+	}
+}
+ @media (min-width: 1200px) {
+	  .player {
+		 width: 470px;
+	}
+}
+*/
+.large-toggle-btn {
+	 border: 1px solid transparent;
+	 /*float: left;*/
+	 font-size: 1.5em;
+	 height: auto
+	 margin: 0 10px 0 0;
+	 overflow: hidden;
+	 /*padding: 5px 0 0 0;*/
+	 position: relative;
+	 text-align: center;
+	 vertical-align: bottom;
+	 width: 54px;
+}
+ .large-play-btn {
+	 cursor: pointer;
+	 display: inline-block;
+	 position: relative;
+	 /*top: -14%;*/
+}
+.large-play-btn:before {
+	 content: "\f04b";
+	 font: 1.5em/1.75 "FontAwesome";
+}
+ .large-pause-btn:before {
+	 content: "\f04c";
+	 font: 1.5em/1.75 "FontAwesome";
+}
+  .player .info-box {
+	 width: calc(100% - 64px);
+	 bottom: 10px;
+	 left: 64px;
+	 position: absolute;
+	 top: 15px;
+}
+  .player .info-box .track-info-box {
+	/* float: left;*/
+	 font-size: 12px;
+	 margin: 0 0 6px 0;
+	 /*visibility: hidden;*/
+	 width: 100%;
+	 /*width: calc(100% - 64px);*/
+	 *zoom: 1;
+}
+  .player .info-box .track-info-box .track-title-text {
+	 display: inline-block;
+}
+  .player .info-box .track-info-box .audio-time {
+	 display: inline-block;
+	 padding: 0 0 0 5px;
+	 width: auto;
+}
+  .player .info-box .track-info-box:before,  .player .info-box .track-info-box:after {
+	 content: " ";
+	 display: table;
+}
+  .player .info-box .track-info-box:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
+}
+  .player .progress-box {
+	 float: left;
+	 width: 100%;
+	 min-width: 270px;
+	 max-width: 300px;
+	 position: relative;
+}
+  .player .progress-box .progress-cell {
+	 height: 10px;
+	 position: relative;
+}
+  .player .progress-box .progress-cell .progress {
+	 background: transparent;
+	 border: 1px solid #000;
+	 height: 8px;
+	 position: relative;
+	 width: auto;
+}
+  .player .progress-box .progress-cell .progress .progress-buffer {
+	 background: #000;
+	 height: 100%;
+	 width: 0;
+}
+ 	.progress-indicator {
+	 background: transparent;
+	 border: 1px solid #000;
+	 border-radius: 0;
+	 cursor: pointer;
+	 height: 8px;
+	 left: -1px;
+	 overflow: hidden;
+	 position: absolute;
+	 top: -1px;
+	 width: 20px;
+	}
+	
+	.progress-indicator:hover, .progress-indicator:focus {
+		background: #fff;	
+	}
+	
+  .player .controls-box {
+	 bottom: 10px;
+	 right: 0;
+	 position: absolute;
+}
+  .player .controls-box .previous-track-btn {
+	 cursor: pointer;
+	 display: inline-block;
+}
+  .player .controls-box .previous-track-btn:before {
+	 content: "\f049";
+	 font: 1em "FontAwesome";
+}
+  .player .controls-box .next-track-btn {
+	 cursor: pointer;
+	 display: inline-block;
+}
+  .player .controls-box .next-track-btn:before {
+	 content: "\f050";
+	 font: 1em "FontAwesome";
+}
+  .player:before,  .player:after {
+	 content: " ";
+	 display: table;
+}
+  .player:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
+}
+  .play-list {
+	 display: block;
+	 margin: 0 auto;
+	 max-width: 420px;
+	 width: 100%;
+}
+  .play-list .play-list-row {
+	 display: block;
+	 margin: 10px 0;
+	 width: 100%;
+	 *zoom: 1;
+}
+  .play-list .play-list-row .track-title .playlist-track {
+	 color: #000;
+	 text-decoration: none;
+}
+  .play-list .play-list-row .track-title .playlist-track:hover {
+	 text-decoration: underline;
+}
+  .play-list .play-list-row .small-toggle-btn {
+	 border: 1px solid transparent;
+	 border-radius: 2px;
+	 cursor: pointer;
+	 display: inline-block;
+	 height: 20px;
+	 margin: 0 auto;
+	 overflow: hidden;
+	 position: relative;
+	 text-align: center;
+	 vertical-align: middle;
+	 width: 20px;
+}
+  .play-list .play-list-row .small-toggle-btn .small-play-btn {
+	 display: inline-block;
+}
+  .play-list .play-list-row .small-toggle-btn .small-play-btn:before {
+	 content: "\f04b";
+	 font: 0.85em "FontAwesome";
+}
+  .play-list .play-list-row .small-toggle-btn .small-pause-btn {
+	 display: inline-block;
+}
+  .play-list .play-list-row .small-toggle-btn .small-pause-btn:before {
+	 content: "\f04c";
+	 font: 0.85em "FontAwesome";
+}
+  .play-list .play-list-row .track-number {
+	 /*display: inline-block;*/
+	 display: none;
+}
+  .play-list .play-list-row .track-title {
+	 display: inline-block;
+}
+.play-list .play-list-row .track-time {
+	display: inline-block;
+	float:right;
+}
+  .play-list .play-list-row .track-title .playlist-track {
+	 text-decoration: none;
+}
+  .play-list .play-list-row .track-title .playlist-track:hover {
+	 text-decoration: underline;
+}
+  .play-list .play-list-row .track-title.active-track {
+	 text-shadow: 1px 0 0 currentColor;
+}
+  .play-list .play-list-row:before,  .play-list .play-list-row:after {
+	 content: " ";
+	 display: table;
+}
+  .play-list .play-list-row:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
+}
+
+.logo {
+	width: 100%;
+	max-width: 1280px;
+	display:block;
+	height: auto;
+}
+.video {
+	position: relative;
+	margin-bottom: 0px;
+  display: block;
+}
+
+.video:hover img, ,video:focus img {
+	opacity: .66;
+}
+.video img {
+	width: 100%;
+	max-width: 524px;
+	height: auto;
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+
+.video-btn {
+		top: 50%;
+		left:50%;
+		transform: perspective(1px) translate(-50%, -50%);
+		-webkit-transform: perspective(1px) translate(-50%, -50%);
+		padding: 20px 50px;
+    background: #fff;
+    border: 1px solid #fff;
+    font-size: 1.25rem;
+    border: 1px solid #fff;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0 20px;
+    line-height: 1;
+    cursor: pointer;
+    position: absolute;
+}
+
+.gallery {
+	margin: 2px -2px;
+}
+
+.gallery::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.gallery a {
+	display: block;
+	margin: 2px;
+	padding: 0;
+	float:left;
+}
+
+.gallery a:hover {
+	opacity: .9;
+}
+
+.mfp-fade.mfp-bg {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-bg.mfp-ready {
+	opacity: 0.8;
+}
+.mfp-fade.mfp-bg.mfp-removing {
+	opacity: 0;
+}
+
+.mfp-fade.mfp-wrap .mfp-content {
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-out; 
+	-moz-transition: all 0.15s ease-out; 
+	transition: all 0.15s ease-out;
+}
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+	opacity: 1;
+}
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+	opacity: 0;
+}
+
+@media (min-width: 576px) {
+	.container {
+		max-width: 540px;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+		max-width: 720px;
+	}
+}
+@media (min-width: 992px) {
+	.container {
+		max-width: 960px;
+	}
+}
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+	header, main, footer {
+		margin: 0;
+		padding: 0;
+	}
+	
+	header {
+		position: absolute;
+		width: 100%;
+		max-width: 1280px;
+		top: 50%;
+		left:50%;
+		transform: perspective(1px) translate(-50%, -50%);
+		-webkit-transform: perspective(1px) translate(-50%, -50%);
+	}
+	
+	main {
+		width: 100vw;
+		height: 100vh;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: unset;
+		height: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	#video {
+		position: absolute;
+		top: 66%;
+		right: calc(50% + 4rem);
+		transform: rotate(-1deg);
+	  -webkit-transform: rotate(-1deg);
+	}
+	
+	#player {
+		width: 420px;
+		position: absolute;
+		bottom: 66%;
+		right: calc(50% + 4rem);
+		transform: rotate(-2deg);
+	  -webkit-transform: rotate(-2deg);
+	}
+	
+	.gallery a:nth-of-type(3) {
+		clear: left;
+	}
+
+	#photos {
+		position: absolute;
+		bottom: 66%;
+		left: 66%;
+		transform: rotate(2.66deg);
+	  -webkit-transform: rotate(2.66deg);
+	}
+	
+	footer {
+		position: absolute;
+		bottom: 0;
+		right:0;
+	}
+	#biography {
+		position: absolute;
+		top: calc(50% + 7.5rem);
+		left: calc(50% + 1.25rem);
+	}
+	/*
+	.biography {
+		letter-spacing: 0.25rem;
+		line-height: 1.4;
+		max-width: 720px;
+		transform: rotate(1deg);
+	  -webkit-transform: rotate(1deg);
+	  font-size: .875rem;
+	  margin: 0;
+	}
+	*/
+
+}
+
+</style>
+</head>
+<body class="demo-1 loading">
+
+<header>
+	<div class="container">
+		<h1 class="visually-hidden">Civilian Camo</h1>
+		<img class="logo" src="logo.png" width="960" height="110" />
+	</div>
+</header>
+
+<main>
+	<div class="container">
+		
+		<audio id="audio" preload="none" tabindex="0">
+			<source src="civilian-camo-neo-plastic.mp3" data-track-number="1" />
+			<source src="civilian-camo-blending-in.mp3" data-track-number="2" />
+			<source src="civilian-camo-do-the-math.mp3" data-track-number="3" />
+			<source src="civilian-camo-specimen.mp3" data-track-number="4" />
+			Your browser does not support HTML5 audio.
+		</audio>
+		
+		<section id="player">
+			<div class="player">
+			
+			<div class="large-toggle-btn">
+			<i class="large-play-btn"><span class="visually-hidden">Large toggle button</span></i>
+			</div>
+			
+			<div class="info-box">
+			<div class="track-info-box">
+			<div class="track-title-text">Neo Plastic</div>
+			<div class="audio-time">
+			<span class="current-time">00:00</span> /
+			<span class="duration">02:17</span>
+			</div>
+			</div>
+			
+			<div class="progress-box">
+			<div class="progress-cell">
+			<div class="progress">
+			<div class="progress-buffer"></div>
+			<div class="progress-indicator"></div>
+			</div>
+			</div>
+			</div>
+			
+			</div>
+			
+			<div class="controls-box">
+			<i class="previous-track-btn disabled"><span class="visually-hidden">Previous track button</span></i>
+			<i class="next-track-btn"><span class="visually-hidden">Next track button</span></i>
+			</div>
+			
+			</div>
+	
+			<div class="play-list">
+			<div class="play-list-row" data-track-row="1">
+			<div class="small-toggle-btn">
+			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+			</div>
+			<div class="track-number">
+			1.
+			</div>
+			<div class="track-title">
+			<a class="playlist-track" href="#" data-play-track="1">Neo Plastic</a>
+			</div>
+			<div class="track-time">
+			02:17
+			</div>
+			</div>
+			<div class="play-list-row" data-track-row="2">
+			<div class="small-toggle-btn">
+			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+			</div>
+			<div class="track-number">
+			2.
+			</div>
+			<div class="track-title">
+			<a class="playlist-track" href="#" data-play-track="2">Blending In</a>
+			</div>
+			<div class="track-time">
+			01:35
+			</div>
+			</div>
+			<div class="play-list-row" data-track-row="3">
+			<div class="small-toggle-btn">
+			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+			</div>
+			<div class="track-number">
+			3.
+			</div>
+			<div class="track-title">
+			<a class="playlist-track" href="#" data-play-track="3">Do The Math</a>
+			</div>
+			<div class="track-time">
+			03:17
+			</div>
+			</div>
+			<div class="play-list-row" data-track-row="4">
+			<div class="small-toggle-btn">
+			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+			</div>
+			<div class="track-number">
+			4.
+			</div>
+			<div class="track-title">
+			<a class="playlist-track" href="#" data-play-track="4">Specimen</a>
+			</div>
+			<div class="track-time">
+			01:35
+			</div>
+			</div>
+			
+			</div>
+		</section>
+
+		<section id="biography">
+		<h2>About CivCam</h2>
+		<p class="biography">
+		***Formed a few years back and finally come to fruition during the lockdown of 2020, the Brooklyn based 2 piece noise rock duo Civilian Camo is the conceptual lovechild of guitarist vocalist Ian Wiedrick and drummer Christy Peixoto. CivCam strives to blatantly pummel your ears as they craft quick dizzying assaults of feedback drenched hard rock tailored for contemporary attention spans. Sometimes melodic sometimes downright chaotic, the dystopian narrative spun around lyrical self disgust helps to create an atmosphere echoing late eighties NY no-wave and early 90's alternative grunge. This is a not so subtle call to keep it heavy, angry, and loud. All while basking in the state of the modern world as we collectively spiral out into oblivion***
+		</p>
+		</section>
+		
+		<section id="video">
+		<h2>Video</h2>
+		<a class="video" href="https://www.youtube.com/watch?v=9PkwkNMF5aI">
+			<img src="video.jpg" width="1920" height="1080" />
+			<span class="video-btn"><i class="large-play-btn"><span class="visually-hidden">Play Video</span></i></span>
+		</a>
+		</section>
+		
+		<section id="photos">
+			<h2>Photos</h2>
+		<div class="gallery">
+			<a href="civilian-camo-1-lg.jpg"><img src="civilian-camo-1-sm.jpg" width="128" height="128" /></a>
+			<a href="civilian-camo-2-lg.jpg"><img src="civilian-camo-2-sm.jpg" width="128" height="128" /></a>
+			<a href="civilian-camo-3-lg.jpg"><img src="civilian-camo-3-sm.jpg" width="128" height="128" /></a>
+			<a href="civilian-camo-4-lg.jpg"><img src="civilian-camo-4-sm.jpg" width="128" height="128" /></a>
+		</div>
+		</section>
+
+</div>
+
+</main>
+<footer>
+	<div class="container">
+<a class="link" aria-label="Bandcamp" href="https://civiliancamo.bandcamp.com/" target="_blank" rel="noopener">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm48.2,326.1h-181L207.9,178h181Z"></path></svg>
+<span class="visually-hidden">Bandcamp</span>
+</a>
+<a class="link" aria-label="Youtube" href="https://www.youtube.com/watch?v=9PkwkNMF5aI" target="_blank" rel="noopener">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+<span class="visually-hidden">Youtube</span>
+</a>
+</div>
+		<div class="glitch">
+			<div class="glitch__img"></div>
+			<div class="glitch__img"></div>
+			<div class="glitch__img"></div>
+			<div class="glitch__img"></div>
+			<div class="glitch__img"></div>
+		</div>
+</footer>
+
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="audio-player.min.js"></script>
+<script src="magnific-popup.min.js"></script>
+<script src="imagesloaded.min.js"></script>
+<script src="glitch.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.video').magnificPopup({
+		disableOn: 700,
+		type: 'iframe',
+		mainClass: 'mfp-fade',
+		removalDelay: 160,
+		preloader: false,
+		fixedContentPos: false
+	});
+});
+
+$(document).ready(function() {
+	$('.gallery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		tLoading: 'Loading image #%curr%...',
+		mainClass: 'mfp-img-mobile',
+		gallery: {
+			enabled: true,
+			navigateByImgClick: true,
+			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+		},
+		image: {
+			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+		}
+	});
+});
+</script>
+
+</body>
+</html>
