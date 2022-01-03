@@ -13,7 +13,6 @@
 <link rel="stylesheet" type="text/css" href="magnific-popup.min.css" />
 <link rel="stylesheet" type="text/css" href="glitch.css" />
 <style type="text/css">
-
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 html {
     -webkit-font-smoothing: antialiased;
@@ -34,8 +33,10 @@ header, main, footer {
 	position: relative;
 	display: block;
 }
-h1 {
-
+section {
+	margin-left: auto;
+	margin-right: auto;
+	display: table;
 }
 h2 {
 	font-weight: 400;
@@ -43,31 +44,37 @@ h2 {
 	font-size: 1rem;
 	letter-spacing: 0.5rem;
 	margin-bottom: .25rem;
-	transform: rotate(-.5deg);
-  -webkit-transform: rotate(-.5deg);
 }
 img {
 	display: block;
+}
+:focus {
+	outline: 3px solid #888;
 }
 a {
 	color: #000;
 	text-decoration: none;
 	display: inline-block;
 }
-
-:focus {
-	outline: 3px solid #888;
-}
-
 a:hover, a:focus {
 	text-decoration: underline;
+}
+ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+li {
+	display: inline-block;
 }
 .biography {
 	letter-spacing: 0.25rem;
 	line-height: 1.4;
-	max-width: 720px;
-	transform: rotate(1deg);
-  -webkit-transform: rotate(1deg);
+	margin: 0;
+}
+footer {
+	text-align: center;
+	padding: 1.5rem 0;
 }
 footer a {
     color: rgba(0, 0, 0, 1);
@@ -76,11 +83,11 @@ footer a {
     text-decoration: none;
 }
 footer a:hover, footer a:focus {
-    
     color: rgba(0, 0, 0, 0.8);
     text-decoration: none;
 }
 footer svg {
+	display: block;
     width: 40px;
     height: 32px;
 }
@@ -104,255 +111,20 @@ footer svg {
 	 display: inline-block !important;
 }
 .container {
-	max-width: 720px;
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 20px;
 	padding-right: 20px;
 }
-.player {
-	 height: 60px;
-	 margin: 0 auto;
-	 position: relative;
-	 width: 100%;
-	 max-width: 420px;
-	 *zoom: 1;
-}
-/*
- @media (min-width: 768px) and (max-width: 991px) {
-	  .player {
-		 width: 470px;
-	}
-}
- @media (min-width: 992px) and (max-width: 1100px) {
-	  .player {
-		 width: 470px;
-	}
-}
- @media (min-width: 1200px) {
-	  .player {
-		 width: 470px;
-	}
-}
-*/
-.large-toggle-btn {
-	 border: 1px solid transparent;
-	 /*float: left;*/
-	 font-size: 1.5em;
-	 height: auto
-	 margin: 0 10px 0 0;
-	 overflow: hidden;
-	 /*padding: 5px 0 0 0;*/
-	 position: relative;
-	 text-align: center;
-	 vertical-align: bottom;
-	 width: 54px;
-}
- .large-play-btn {
-	 cursor: pointer;
-	 display: inline-block;
-	 position: relative;
-	 /*top: -14%;*/
-}
-.large-play-btn:before {
-	 content: "\f04b";
-	 font: 1.5em/1.75 "FontAwesome";
-}
- .large-pause-btn:before {
-	 content: "\f04c";
-	 font: 1.5em/1.75 "FontAwesome";
-}
-  .player .info-box {
-	 width: calc(100% - 64px);
-	 bottom: 10px;
-	 left: 64px;
-	 position: absolute;
-	 top: 15px;
-}
-  .player .info-box .track-info-box {
-	/* float: left;*/
-	 font-size: 12px;
-	 margin: 0 0 6px 0;
-	 /*visibility: hidden;*/
-	 width: 100%;
-	 /*width: calc(100% - 64px);*/
-	 *zoom: 1;
-}
-  .player .info-box .track-info-box .track-title-text {
-	 display: inline-block;
-}
-  .player .info-box .track-info-box .audio-time {
-	 display: inline-block;
-	 padding: 0 0 0 5px;
-	 width: auto;
-}
-  .player .info-box .track-info-box:before,  .player .info-box .track-info-box:after {
-	 content: " ";
-	 display: table;
-}
-  .player .info-box .track-info-box:after {
-	 clear: both;
-	 display: block;
-	 font-size: 0;
-	 height: 0;
-	 visibility: hidden;
-}
-  .player .progress-box {
-	 float: left;
-	 width: 100%;
-	 min-width: 270px;
-	 max-width: 300px;
-	 position: relative;
-}
-  .player .progress-box .progress-cell {
-	 height: 10px;
-	 position: relative;
-}
-  .player .progress-box .progress-cell .progress {
-	 background: transparent;
-	 border: 1px solid #000;
-	 height: 8px;
-	 position: relative;
-	 width: auto;
-}
-  .player .progress-box .progress-cell .progress .progress-buffer {
-	 background: #000;
-	 height: 100%;
-	 width: 0;
-}
- 	.progress-indicator {
-	 background: transparent;
-	 border: 1px solid #000;
-	 border-radius: 0;
-	 cursor: pointer;
-	 height: 8px;
-	 left: -1px;
-	 overflow: hidden;
-	 position: absolute;
-	 top: -1px;
-	 width: 20px;
-	}
-	
-	.progress-indicator:hover, .progress-indicator:focus {
-		background: #fff;	
-	}
-	
-  .player .controls-box {
-	 bottom: 10px;
-	 right: 0;
-	 position: absolute;
-}
-  .player .controls-box .previous-track-btn {
-	 cursor: pointer;
-	 display: inline-block;
-}
-  .player .controls-box .previous-track-btn:before {
-	 content: "\f049";
-	 font: 1em "FontAwesome";
-}
-  .player .controls-box .next-track-btn {
-	 cursor: pointer;
-	 display: inline-block;
-}
-  .player .controls-box .next-track-btn:before {
-	 content: "\f050";
-	 font: 1em "FontAwesome";
-}
-  .player:before,  .player:after {
-	 content: " ";
-	 display: table;
-}
-  .player:after {
-	 clear: both;
-	 display: block;
-	 font-size: 0;
-	 height: 0;
-	 visibility: hidden;
-}
-  .play-list {
-	 display: block;
-	 margin: 0 auto;
-	 max-width: 420px;
-	 width: 100%;
-}
-  .play-list .play-list-row {
-	 display: block;
-	 margin: 10px 0;
-	 width: 100%;
-	 *zoom: 1;
-}
-  .play-list .play-list-row .track-title .playlist-track {
-	 color: #000;
-	 text-decoration: none;
-}
-  .play-list .play-list-row .track-title .playlist-track:hover {
-	 text-decoration: underline;
-}
-  .play-list .play-list-row .small-toggle-btn {
-	 border: 1px solid transparent;
-	 border-radius: 2px;
-	 cursor: pointer;
-	 display: inline-block;
-	 height: 20px;
-	 margin: 0 auto;
-	 overflow: hidden;
-	 position: relative;
-	 text-align: center;
-	 vertical-align: middle;
-	 width: 20px;
-}
-  .play-list .play-list-row .small-toggle-btn .small-play-btn {
-	 display: inline-block;
-}
-  .play-list .play-list-row .small-toggle-btn .small-play-btn:before {
-	 content: "\f04b";
-	 font: 0.85em "FontAwesome";
-}
-  .play-list .play-list-row .small-toggle-btn .small-pause-btn {
-	 display: inline-block;
-}
-  .play-list .play-list-row .small-toggle-btn .small-pause-btn:before {
-	 content: "\f04c";
-	 font: 0.85em "FontAwesome";
-}
-  .play-list .play-list-row .track-number {
-	 /*display: inline-block;*/
-	 display: none;
-}
-  .play-list .play-list-row .track-title {
-	 display: inline-block;
-}
-.play-list .play-list-row .track-time {
-	display: inline-block;
-	float:right;
-}
-  .play-list .play-list-row .track-title .playlist-track {
-	 text-decoration: none;
-}
-  .play-list .play-list-row .track-title .playlist-track:hover {
-	 text-decoration: underline;
-}
-  .play-list .play-list-row .track-title.active-track {
-	 text-shadow: 1px 0 0 currentColor;
-}
-  .play-list .play-list-row:before,  .play-list .play-list-row:after {
-	 content: " ";
-	 display: table;
-}
-  .play-list .play-list-row:after {
-	 clear: both;
-	 display: block;
-	 font-size: 0;
-	 height: 0;
-	 visibility: hidden;
-}
+
 
 .logo {
 	width: 100%;
 	max-width: 1280px;
 	display:block;
 	height: auto;
+	padding: 1.5rem 0;
 }
 .video {
 	position: relative;
@@ -409,6 +181,233 @@ footer svg {
 
 .gallery a:hover {
 	opacity: .9;
+}
+
+	#music {
+		display: block;
+	}
+
+  .copyright {
+	  font-size: .75rem;
+		display: block;
+		font-family: Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		text-shadow: none;
+		letter-spacing: 0.25rem;
+  }
+  
+.player {
+	 height: 60px;
+	 margin: 0 auto;
+	 position: relative;
+	 width: 100%;
+	 max-width: 420px;
+	 *zoom: 1;
+}
+.large-toggle-btn {
+	 border: 1px solid transparent;
+	 font-size: 1.5em;
+	 height: auto;
+	 margin: 0 10px 0 0;
+	 overflow: hidden;
+	 position: relative;
+	 text-align: center;
+	 vertical-align: bottom;
+	 width: 54px;
+}
+ .large-play-btn {
+	 cursor: pointer;
+	 display: inline-block;
+	 position: relative;
+	 /*top: -14%;*/
+}
+.large-play-btn:before {
+	 content: "\f04b";
+	 font: 1.5em/1.75 "FontAwesome";
+}
+ .large-pause-btn:before {
+	 content: "\f04c";
+	 font: 1.5em/1.75 "FontAwesome";
+}
+.info-box {
+	 width: calc(100% - 64px);
+	 bottom: 10px;
+	 left: 64px;
+	 position: absolute;
+	 top: 15px;
+}
+.track-info-box {
+	 font-size: 12px;
+	 margin: 0 0 6px 0;
+	 width: 100%;
+	 *zoom: 1;
+}
+.track-title-text {
+	 display: inline-block;
+}
+.audio-time {
+	 display: inline-block;
+	 padding: 0 0 0 5px;
+	 width: auto;
+}
+.track-info-box:before, .track-info-box:after {
+	 content: " ";
+	 display: table;
+}
+.track-info-box:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
+}
+.progress-box {
+	 float: left;
+	 width: 100%;
+	 min-width: 270px;
+	 max-width: 300px;
+	 position: relative;
+}
+.progress-cell {
+	 height: 10px;
+	 position: relative;
+}
+.progress {
+	 background: transparent;
+	 border: 1px solid #000;
+	 height: 8px;
+	 position: relative;
+	 width: auto;
+}
+.progress-buffer {
+	 background: #000;
+	 height: 100%;
+	 width: 0;
+}
+ 	.progress-indicator {
+	 background: transparent;
+	 border: 1px solid #000;
+	 border-radius: 0;
+	 cursor: pointer;
+	 height: 8px;
+	 left: -1px;
+	 overflow: hidden;
+	 position: absolute;
+	 top: -1px;
+	 width: 20px;
+	}
+	
+	.progress-indicator:hover, .progress-indicator:focus {
+		background: #fff;	
+	}
+	
+.controls-box {
+	 bottom: 10px;
+	 right: 0;
+	 position: absolute;
+}
+.previous-track-btn {
+	 cursor: pointer;
+	 display: inline-block;
+}
+.previous-track-btn:before {
+	 content: "\f049";
+	 font: 1em "FontAwesome";
+}
+.next-track-btn {
+	 cursor: pointer;
+	 display: inline-block;
+}
+.next-track-btn:before {
+	 content: "\f050";
+	 font: 1em "FontAwesome";
+}
+.player:before,  .player:after {
+	 content: " ";
+	 display: table;
+}
+.player:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
+}
+.play-list {
+	 display: block;
+	 margin: 0 auto;
+	 max-width: 420px;
+	 width: 100%;
+}
+.play-list-row {
+	 display: block;
+	 margin: 10px 0;
+	 width: 100%;
+	 *zoom: 1;
+}
+  .play-list .play-list-row .track-title .playlist-track {
+	 color: #000;
+	 text-decoration: none;
+}
+  .play-list .play-list-row .track-title .playlist-track:hover {
+	 text-decoration: underline;
+}
+  .play-list .play-list-row .small-toggle-btn {
+	 border: 1px solid transparent;
+	 border-radius: 2px;
+	 cursor: pointer;
+	 display: inline-block;
+	 height: 20px;
+	 margin: 0 auto;
+	 overflow: hidden;
+	 position: relative;
+	 text-align: center;
+	 vertical-align: middle;
+	 width: 20px;
+}
+  .play-list .play-list-row .small-toggle-btn .small-play-btn {
+	 display: inline-block;
+}
+  .play-list .play-list-row .small-toggle-btn .small-play-btn:before {
+	 content: "\f04b";
+	 font: 0.85em "FontAwesome";
+}
+  .play-list .play-list-row .small-toggle-btn .small-pause-btn {
+	 display: inline-block;
+}
+  .play-list .play-list-row .small-toggle-btn .small-pause-btn:before {
+	 content: "\f04c";
+	 font: 0.85em "FontAwesome";
+}
+.track-number {
+	display: none;
+}
+  .play-list .play-list-row .track-title {
+	 display: inline-block;
+}
+.play-list .play-list-row .track-time {
+	display: inline-block;
+	float:right;
+}
+  .play-list .play-list-row .track-title .playlist-track {
+	 text-decoration: none;
+}
+  .play-list .play-list-row .track-title .playlist-track:hover {
+	 text-decoration: underline;
+}
+  .play-list .play-list-row .track-title.active-track {
+	 text-shadow: 1px 0 0 currentColor;
+}
+  .play-list .play-list-row:before,  .play-list .play-list-row:after {
+	 content: " ";
+	 display: table;
+}
+  .play-list .play-list-row:after {
+	 clear: both;
+	 display: block;
+	 font-size: 0;
+	 height: 0;
+	 visibility: hidden;
 }
 
 .mfp-fade.mfp-bg {
@@ -492,7 +491,7 @@ footer svg {
 	  -webkit-transform: rotate(-1deg);
 	}
 	
-	#player {
+	#music {
 		width: 420px;
 		position: absolute;
 		bottom: 66%;
@@ -523,221 +522,193 @@ footer svg {
 		top: calc(50% + 7.5rem);
 		left: calc(50% + 1.25rem);
 	}
-	/*
-	.biography {
-		letter-spacing: 0.25rem;
-		line-height: 1.4;
-		max-width: 720px;
-		transform: rotate(1deg);
-	  -webkit-transform: rotate(1deg);
-	  font-size: .875rem;
-	  margin: 0;
+	h2 {
+	transform: rotate(-.5deg);
+  -webkit-transform: rotate(-.5deg);
 	}
-	*/
-
+	.copyright {
+		line-height: 42px;
+		float: right;
+	}
+	ul {
+		float:right;
+	}
+	.biography {
+	transform: rotate(1deg);
+  -webkit-transform: rotate(1deg);
+	max-width: 720px;
+  }
 }
 
 </style>
 </head>
-<body class="demo-1 loading">
+	<body class="demo-1 loading">
+			<header>
+				<div class="container">
+					<h1 class="visually-hidden">Civilian Camo</h1>
+					<img class="logo" src="logo.png" width="960" height="110" />
+				</div>
+			</header>
+			<main>
+				<div class="container">
+					<audio id="audio" preload="none" tabindex="0">
+						<source src="civilian-camo-neo-plastic.mp3" data-track-number="1" />
+						<source src="civilian-camo-blending-in.mp3" data-track-number="2" />
+						<source src="civilian-camo-do-the-math.mp3" data-track-number="3" />
+						<source src="civilian-camo-specimen.mp3" data-track-number="4" />
+						Your browser does not support HTML5 audio.
+					</audio>
+					<section id="music">
+						<div class="player">
+							<div class="large-toggle-btn">
+								<i class="large-play-btn"><span class="visually-hidden">Large toggle button</span></i>
+							</div>
+							<div class="info-box">
+								<div class="track-info-box">
+									<div class="track-title-text">Neo Plastic</div>
+									<div class="audio-time">
+										<span class="current-time">00:00</span> /
+										<span class="duration">02:17</span>
+									</div>
+								</div>
+								<div class="progress-box">
+									<div class="progress-cell">
+										<div class="progress">
+											<div class="progress-buffer"></div>
+											<div class="progress-indicator"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="controls-box">
+								<i class="previous-track-btn disabled"><span class="visually-hidden">Previous track button</span></i>
+								<i class="next-track-btn"><span class="visually-hidden">Next track button</span></i>
+							</div>	
+						</div>
+						<div class="play-list">
+							<div class="play-list-row" data-track-row="1">
+								<div class="small-toggle-btn">
+									<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+								</div>
+								<div class="track-number">1.</div>
+								<div class="track-title">
+									<a class="playlist-track" href="#" data-play-track="1">Neo Plastic</a>
+								</div>
+								<div class="track-time">02:17</div>
+							</div>
+							<div class="play-list-row" data-track-row="2">
+								<div class="small-toggle-btn">
+									<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+								</div>
+								<div class="track-number">2.</div>
+								<div class="track-title">
+									<a class="playlist-track" href="#" data-play-track="2">Blending In</a>
+								</div>
+								<div class="track-time">01:35</div>
+							</div>
+							<div class="play-list-row" data-track-row="3">
+								<div class="small-toggle-btn">
+									<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+								</div>
+								<div class="track-number">3.</div>
+								<div class="track-title">
+									<a class="playlist-track" href="#" data-play-track="3">Do The Math</a>
+								</div>
+								<div class="track-time">03:17</div>
+							</div>
+							<div class="play-list-row" data-track-row="4">
+								<div class="small-toggle-btn">
+									<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
+								</div>
+								<div class="track-number">4.</div>
+								<div class="track-title">
+									<a class="playlist-track" href="#" data-play-track="4">Specimen</a>
+								</div>
+								<div class="track-time">01:35</div>
+							</div>
+						</div>
+					</section>
+					<section id="video">
+						<h2>Play Video</h2>
+						<a class="video" href="https://www.youtube.com/watch?v=9PkwkNMF5aI">
+							<img src="video.jpg" width="1920" height="1080" />
+							<span class="video-btn"><i class="large-play-btn"><span class="visually-hidden">Play Video</span></i></span>
+						</a>
+					</section>
+					<section id="biography">
+						<h2>About CivCam</h2>
+						<p class="biography">***Formed a few years back and finally come to fruition during the lockdown of 2020, the Brooklyn based 2 piece noise rock duo Civilian Camo is the conceptual lovechild of guitarist vocalist Ian Wiedrick and drummer Christy Peixoto. CivCam strives to blatantly pummel your ears as they craft quick dizzying assaults of feedback drenched hard rock tailored for contemporary attention spans. Sometimes melodic sometimes downright chaotic, the dystopian narrative spun around lyrical self disgust helps to create an atmosphere echoing late eighties NY no-wave and early 90's alternative grunge. This is a not so subtle call to keep it heavy, angry, and loud. All while basking in the state of the modern world as we collectively spiral out into oblivion***</p>
+					</section>	
 
-<header>
-	<div class="container">
-		<h1 class="visually-hidden">Civilian Camo</h1>
-		<img class="logo" src="logo.png" width="960" height="110" />
-	</div>
-</header>
-
-<main>
-	<div class="container">
-		
-		<audio id="audio" preload="none" tabindex="0">
-			<source src="civilian-camo-neo-plastic.mp3" data-track-number="1" />
-			<source src="civilian-camo-blending-in.mp3" data-track-number="2" />
-			<source src="civilian-camo-do-the-math.mp3" data-track-number="3" />
-			<source src="civilian-camo-specimen.mp3" data-track-number="4" />
-			Your browser does not support HTML5 audio.
-		</audio>
-		
-		<section id="player">
-			<div class="player">
+					<section id="photos">
+						<h2>View Photos</h2>
+						<div class="gallery">
+							<a href="civilian-camo-1-lg.jpg"><img src="civilian-camo-1-sm.jpg" width="128" height="128" /></a>
+							<a href="civilian-camo-2-lg.jpg"><img src="civilian-camo-2-sm.jpg" width="128" height="128" /></a>
+							<a href="civilian-camo-3-lg.jpg"><img src="civilian-camo-3-sm.jpg" width="128" height="128" /></a>
+							<a href="civilian-camo-4-lg.jpg"><img src="civilian-camo-4-sm.jpg" width="128" height="128" /></a>
+						</div>
+					</section>
+				</div>	
+			</main>
+			<footer>
+				<ul>
+					<li>
+						<a class="link" aria-label="Bandcamp" href="https://civiliancamo.bandcamp.com/" target="_blank" rel="noopener">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm48.2,326.1h-181L207.9,178h181Z"></path></svg>
+							<span class="visually-hidden">Bandcamp</span>
+						</a>
+					</li>
+					<li>
+						<a class="link" aria-label="Youtube" href="https://www.youtube.com/watch?v=9PkwkNMF5aI" target="_blank" rel="noopener">
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
+							<span class="visually-hidden">Youtube</span>
+						</a>
+					</li>
+				</ul>
+				<span class="copyright">&copy;2021 Civilian Camo</span>
+				<div class="glitch">
+					<div class="glitch__img"></div>
+					<div class="glitch__img"></div>
+					<div class="glitch__img"></div>
+					<div class="glitch__img"></div>
+					<div class="glitch__img"></div>
+				</div>
+			</footer>
+			<script src="jquery-3.6.0.min.js"></script>
+			<script src="audio-player.min.js"></script>
+			<script src="magnific-popup.min.js"></script>
+			<script src="imagesloaded.min.js"></script>
+			<script src="glitch.min.js"></script>
 			
-			<div class="large-toggle-btn">
-			<i class="large-play-btn"><span class="visually-hidden">Large toggle button</span></i>
-			</div>
+			<script type="text/javascript">
+			$(document).ready(function() {
+				$('.video').magnificPopup({
+					disableOn: 700,
+					type: 'iframe',
+					mainClass: 'mfp-fade',
+					removalDelay: 160,
+					preloader: false,
+					fixedContentPos: false
+				});
+			});
 			
-			<div class="info-box">
-			<div class="track-info-box">
-			<div class="track-title-text">Neo Plastic</div>
-			<div class="audio-time">
-			<span class="current-time">00:00</span> /
-			<span class="duration">02:17</span>
-			</div>
-			</div>
-			
-			<div class="progress-box">
-			<div class="progress-cell">
-			<div class="progress">
-			<div class="progress-buffer"></div>
-			<div class="progress-indicator"></div>
-			</div>
-			</div>
-			</div>
-			
-			</div>
-			
-			<div class="controls-box">
-			<i class="previous-track-btn disabled"><span class="visually-hidden">Previous track button</span></i>
-			<i class="next-track-btn"><span class="visually-hidden">Next track button</span></i>
-			</div>
-			
-			</div>
-	
-			<div class="play-list">
-			<div class="play-list-row" data-track-row="1">
-			<div class="small-toggle-btn">
-			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
-			</div>
-			<div class="track-number">
-			1.
-			</div>
-			<div class="track-title">
-			<a class="playlist-track" href="#" data-play-track="1">Neo Plastic</a>
-			</div>
-			<div class="track-time">
-			02:17
-			</div>
-			</div>
-			<div class="play-list-row" data-track-row="2">
-			<div class="small-toggle-btn">
-			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
-			</div>
-			<div class="track-number">
-			2.
-			</div>
-			<div class="track-title">
-			<a class="playlist-track" href="#" data-play-track="2">Blending In</a>
-			</div>
-			<div class="track-time">
-			01:35
-			</div>
-			</div>
-			<div class="play-list-row" data-track-row="3">
-			<div class="small-toggle-btn">
-			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
-			</div>
-			<div class="track-number">
-			3.
-			</div>
-			<div class="track-title">
-			<a class="playlist-track" href="#" data-play-track="3">Do The Math</a>
-			</div>
-			<div class="track-time">
-			03:17
-			</div>
-			</div>
-			<div class="play-list-row" data-track-row="4">
-			<div class="small-toggle-btn">
-			<i class="small-play-btn"><span class="visually-hidden">Small toggle button</span></i>
-			</div>
-			<div class="track-number">
-			4.
-			</div>
-			<div class="track-title">
-			<a class="playlist-track" href="#" data-play-track="4">Specimen</a>
-			</div>
-			<div class="track-time">
-			01:35
-			</div>
-			</div>
-			
-			</div>
-		</section>
-
-		<section id="biography">
-		<h2>About CivCam</h2>
-		<p class="biography">
-		***Formed a few years back and finally come to fruition during the lockdown of 2020, the Brooklyn based 2 piece noise rock duo Civilian Camo is the conceptual lovechild of guitarist vocalist Ian Wiedrick and drummer Christy Peixoto. CivCam strives to blatantly pummel your ears as they craft quick dizzying assaults of feedback drenched hard rock tailored for contemporary attention spans. Sometimes melodic sometimes downright chaotic, the dystopian narrative spun around lyrical self disgust helps to create an atmosphere echoing late eighties NY no-wave and early 90's alternative grunge. This is a not so subtle call to keep it heavy, angry, and loud. All while basking in the state of the modern world as we collectively spiral out into oblivion***
-		</p>
-		</section>
-		
-		<section id="video">
-		<h2>Video</h2>
-		<a class="video" href="https://www.youtube.com/watch?v=9PkwkNMF5aI?autoplay=1">
-			<img src="video.jpg" width="1920" height="1080" />
-			<span class="video-btn"><i class="large-play-btn"><span class="visually-hidden">Play Video</span></i></span>
-		</a>
-		</section>
-		
-		<section id="photos">
-			<h2>Photos</h2>
-		<div class="gallery">
-			<a href="civilian-camo-1-lg.jpg"><img src="civilian-camo-1-sm.jpg" width="128" height="128" /></a>
-			<a href="civilian-camo-2-lg.jpg"><img src="civilian-camo-2-sm.jpg" width="128" height="128" /></a>
-			<a href="civilian-camo-3-lg.jpg"><img src="civilian-camo-3-sm.jpg" width="128" height="128" /></a>
-			<a href="civilian-camo-4-lg.jpg"><img src="civilian-camo-4-sm.jpg" width="128" height="128" /></a>
-		</div>
-		</section>
-
-</div>
-
-</main>
-<footer>
-	<div class="container">
-<a class="link" aria-label="Bandcamp" href="https://civiliancamo.bandcamp.com/" target="_blank" rel="noopener">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M256,8C119,8,8,119,8,256S119,504,256,504,504,393,504,256,393,8,256,8Zm48.2,326.1h-181L207.9,178h181Z"></path></svg>
-<span class="visually-hidden">Bandcamp</span>
-</a>
-<a class="link" aria-label="Youtube" href="https://www.youtube.com/watch?v=9PkwkNMF5aI" target="_blank" rel="noopener">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"></path>
-<span class="visually-hidden">Youtube</span>
-</a>
-</div>
-		<div class="glitch">
-			<div class="glitch__img"></div>
-			<div class="glitch__img"></div>
-			<div class="glitch__img"></div>
-			<div class="glitch__img"></div>
-			<div class="glitch__img"></div>
-		</div>
-</footer>
-
-
-<script src="jquery-3.6.0.min.js"></script>
-<script src="audio-player.min.js"></script>
-<script src="magnific-popup.min.js"></script>
-<script src="imagesloaded.min.js"></script>
-<script src="glitch.min.js"></script>
-
-<script type="text/javascript">
-$(document).ready(function() {
-	$('.video').magnificPopup({
-		disableOn: 700,
-		type: 'iframe',
-		mainClass: 'mfp-fade',
-		removalDelay: 160,
-		preloader: false,
-		fixedContentPos: false
-	});
-});
-
-$(document).ready(function() {
-	$('.gallery').magnificPopup({
-		delegate: 'a',
-		type: 'image',
-		tLoading: 'Loading image #%curr%...',
-		mainClass: 'mfp-img-mobile',
-		gallery: {
-			enabled: true,
-			navigateByImgClick: true,
-			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
-		},
-		image: {
-			tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
-		}
-	});
-});
-</script>
-
-</body>
+			$(document).ready(function() {
+				$('.gallery').magnificPopup({
+					delegate: 'a',
+					type: 'image',
+					tLoading: 'Loading image #%curr%...',
+					mainClass: 'mfp-img-mobile',
+					gallery: {
+						enabled: true,
+						navigateByImgClick: true,
+						preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+					},
+					image: {
+						tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+					}
+				});
+			});
+			</script>
+	</body>
 </html>
