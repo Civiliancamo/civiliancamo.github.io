@@ -29,6 +29,10 @@ body {
     overflow-x: hidden;
     text-shadow: .5px 0 0 currentColor;
 }
+header {
+	pointer-events: none;
+	z-index: 1;
+}
 header, main, footer {
 	position: relative;
 	display: block;
@@ -67,6 +71,9 @@ ul {
 li {
 	display: inline-block;
 }
+#biography {
+	margin: 1.5rem auto;
+}
 .biography {
 	letter-spacing: 0.25rem;
 	line-height: 1.4;
@@ -88,7 +95,7 @@ footer a:hover, footer a:focus {
 }
 footer svg {
 	display: block;
-    width: 40px;
+    width: 32px;
     height: 32px;
 }
 .visually-hidden {
@@ -117,32 +124,33 @@ footer svg {
 	padding-left: 20px;
 	padding-right: 20px;
 }
-
-
 .logo {
 	width: 100%;
 	max-width: 1280px;
 	display:block;
 	height: auto;
-	padding: 1.5rem 0;
+	margin: 1.5rem auto;
+}
+#video {
+	margin: 2.5rem auto;
+	transform: rotate(-1deg);
+	-webkit-transform: rotate(-1deg);
 }
 .video {
 	position: relative;
-	margin-bottom: 0px;
+	margin: 0;
   display: block;
 }
-
 .video:hover img, ,video:focus img {
 	opacity: .66;
 }
 .video img {
 	width: 100%;
-	max-width: 524px;
+	max-width: 960px;
 	height: auto;
   -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
   filter: grayscale(100%);
 }
-
 .video-btn {
 		top: 50%;
 		left:50%;
@@ -161,47 +169,53 @@ footer svg {
     cursor: pointer;
     position: absolute;
 }
-
+#photos {
+	margin: 2.5rem 0;
+	transform: rotate(2.66deg);
+	-webkit-transform: rotate(2.66deg);
+}
 .gallery {
 	margin: 2px -2px;
 }
-
 .gallery::after {
   content: "";
   clear: both;
   display: table;
 }
-
 .gallery a {
 	display: block;
 	margin: 2px;
+	width: calc(50% - 4px);
 	padding: 0;
 	float:left;
 }
-
+.gallery a img {
+	width: 100%;
+	max-width: 360px;
+	height:auto;
+}
 .gallery a:hover {
 	opacity: .9;
 }
-
-	#music {
-		display: block;
-	}
-
-  .copyright {
-	  font-size: .75rem;
-		display: block;
-		font-family: Helvetica, Arial, sans-serif;
-		text-transform: uppercase;
-		text-shadow: none;
-		letter-spacing: 0.25rem;
-  }
-  
+#music {
+	margin: 0 auto 1.5rem;
+	display: block;
+}
+.copyright {
+  font-size: .6325rem;
+	display: block;
+	font-family: Helvetica, Arial, sans-serif;
+	text-transform: uppercase;
+	text-shadow: none;
+	letter-spacing: 0.25rem;
+	padding: 0 10px;
+}
 .player {
 	 height: 60px;
 	 margin: 0 auto;
 	 position: relative;
 	 width: 100%;
-	 max-width: 420px;
+	 /*max-width: 420px;*/
 	 *zoom: 1;
 }
 .large-toggle-btn {
@@ -213,7 +227,7 @@ footer svg {
 	 position: relative;
 	 text-align: center;
 	 vertical-align: bottom;
-	 width: 54px;
+	 width: 34px;
 }
  .large-play-btn {
 	 cursor: pointer;
@@ -230,9 +244,9 @@ footer svg {
 	 font: 1.5em/1.75 "FontAwesome";
 }
 .info-box {
-	 width: calc(100% - 64px);
+	 width: calc(100% - 50px);
 	 bottom: 10px;
-	 left: 64px;
+	 left: 50px;
 	 position: absolute;
 	 top: 15px;
 }
@@ -263,9 +277,9 @@ footer svg {
 }
 .progress-box {
 	 float: left;
-	 width: 100%;
-	 min-width: 270px;
-	 max-width: 300px;
+	 width: calc(100% - 50px);
+	 /*min-width: 270px;
+	 max-width: 300px;*/
 	 position: relative;
 }
 .progress-cell {
@@ -284,24 +298,24 @@ footer svg {
 	 height: 100%;
 	 width: 0;
 }
- 	.progress-indicator {
-	 background: transparent;
-	 border: 1px solid #000;
-	 border-radius: 0;
-	 cursor: pointer;
-	 height: 8px;
-	 left: -1px;
-	 overflow: hidden;
-	 position: absolute;
-	 top: -1px;
-	 width: 20px;
-	}
-	
-	.progress-indicator:hover, .progress-indicator:focus {
-		background: #fff;	
-	}
-	
+.progress-indicator {
+ background: transparent;
+ border: 1px solid #000;
+ border-radius: 0;
+ cursor: pointer;
+ height: 8px;
+ left: -1px;
+ overflow: hidden;
+ position: absolute;
+ top: -1px;
+ width: 20px;
+}
+.progress-indicator:hover, .progress-indicator:focus {
+	background: #fff;	
+}	
 .controls-box {
+	 width:36px;
+	 height: 20px;
 	 bottom: 10px;
 	 right: 0;
 	 position: absolute;
@@ -317,6 +331,7 @@ footer svg {
 .next-track-btn {
 	 cursor: pointer;
 	 display: inline-block;
+	 margin-left: 4px;
 }
 .next-track-btn:before {
 	 content: "\f050";
@@ -336,7 +351,7 @@ footer svg {
 .play-list {
 	 display: block;
 	 margin: 0 auto;
-	 max-width: 420px;
+	 /*max-width: 420px;*/
 	 width: 100%;
 }
 .play-list-row {
@@ -446,20 +461,15 @@ footer svg {
 		max-width: 720px;
 	}
 }
-@media (min-width: 992px) {
+@media (min-width: 992px) and (min-height: 980px) {
 	.container {
 		max-width: 960px;
-	}
-}
-@media (min-width: 1200px) {
-	.container {
-		max-width: 1140px;
 	}
 	header, main, footer {
 		margin: 0;
 		padding: 0;
+		overflow: hidden;
 	}
-	
 	header {
 		position: absolute;
 		width: 100%;
@@ -469,12 +479,10 @@ footer svg {
 		transform: perspective(1px) translate(-50%, -50%);
 		-webkit-transform: perspective(1px) translate(-50%, -50%);
 	}
-	
 	main {
 		width: 100vw;
 		height: 100vh;
 	}
-	
 	.container {
 		width: 100%;
 		max-width: unset;
@@ -482,63 +490,66 @@ footer svg {
 		padding-left: 0;
 		padding-right: 0;
 	}
-	
 	#video {
 		position: absolute;
-		top: 66%;
-		right: calc(50% + 4rem);
-		transform: rotate(-1deg);
-	  -webkit-transform: rotate(-1deg);
+		top: calc(50% + 4.25rem);
+		right: 50%;
+	  max-width: 720px;
 	}
-	
 	#music {
 		width: 420px;
 		position: absolute;
 		bottom: 66%;
-		right: calc(50% + 4rem);
+		right: 56%;
+		margin: 2rem;
 		transform: rotate(-2deg);
 	  -webkit-transform: rotate(-2deg);
 	}
-	
 	.gallery a:nth-of-type(3) {
 		clear: left;
 	}
-
 	#photos {
 		position: absolute;
-		bottom: 66%;
-		left: 66%;
-		transform: rotate(2.66deg);
-	  -webkit-transform: rotate(2.66deg);
-	}
-	
-	footer {
-		position: absolute;
-		bottom: 0;
-		right:0;
+		bottom: 50%;
+		left: 50%;
+	  max-width: 580px;
 	}
 	#biography {
 		position: absolute;
-		top: calc(50% + 7.5rem);
-		left: calc(50% + 1.25rem);
+		top: calc(50% + 5.5rem);
+		left: 55%;
+		max-width: 640px;
 	}
+	.biography {
+		transform: rotate(1deg);
+	  -webkit-transform: rotate(1deg);
+  }
 	h2 {
 	transform: rotate(-.5deg);
   -webkit-transform: rotate(-.5deg);
 	}
+	footer {
+		position: absolute;
+		bottom: 0;
+		right:0;
+		width:100%;
+		height: 44px;
+	}
 	.copyright {
-		line-height: 42px;
-		float: right;
+		line-height: 44px;
+		float: left;
 	}
 	ul {
 		float:right;
 	}
-	.biography {
-	transform: rotate(1deg);
-  -webkit-transform: rotate(1deg);
-	max-width: 720px;
-  }
 }
+/*
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1140px;
+	}
+}
+*/
 
 </style>
 </head>
@@ -581,8 +592,7 @@ footer svg {
 								</div>
 							</div>
 							<div class="controls-box">
-								<i class="previous-track-btn disabled"><span class="visually-hidden">Previous track button</span></i>
-								<i class="next-track-btn"><span class="visually-hidden">Next track button</span></i>
+								<i class="previous-track-btn disabled"><span class="visually-hidden">Previous track button</span></i><i class="next-track-btn"><span class="visually-hidden">Next track button</span></i>
 							</div>	
 						</div>
 						<div class="play-list">
@@ -629,24 +639,24 @@ footer svg {
 						</div>
 					</section>
 					<section id="video">
-						<h2>Play Video</h2>
+						<h2 class="visually-hidden">Play Video</h2>
 						<a class="video" href="https://www.youtube.com/watch?v=9PkwkNMF5aI">
 							<img src="video.jpg" width="1920" height="1080" />
 							<span class="video-btn"><i class="large-play-btn"><span class="visually-hidden">Play Video</span></i></span>
 						</a>
 					</section>
 					<section id="biography">
-						<h2>About CivCam</h2>
+						<h2 class="visually-hidden">About CivCam</h2>
 						<p class="biography">***Formed a few years back and finally come to fruition during the lockdown of 2020, the Brooklyn based 2 piece noise rock duo Civilian Camo is the conceptual lovechild of guitarist vocalist Ian Wiedrick and drummer Christy Peixoto. CivCam strives to blatantly pummel your ears as they craft quick dizzying assaults of feedback drenched hard rock tailored for contemporary attention spans. Sometimes melodic sometimes downright chaotic, the dystopian narrative spun around lyrical self disgust helps to create an atmosphere echoing late eighties NY no-wave and early 90's alternative grunge. This is a not so subtle call to keep it heavy, angry, and loud. All while basking in the state of the modern world as we collectively spiral out into oblivion***</p>
 					</section>	
 
 					<section id="photos">
-						<h2>View Photos</h2>
+						<h2 class="visually-hidden">View Photos</h2>
 						<div class="gallery">
-							<a href="civilian-camo-1-lg.jpg"><img src="civilian-camo-1-sm.jpg" width="128" height="128" /></a>
-							<a href="civilian-camo-2-lg.jpg"><img src="civilian-camo-2-sm.jpg" width="128" height="128" /></a>
-							<a href="civilian-camo-3-lg.jpg"><img src="civilian-camo-3-sm.jpg" width="128" height="128" /></a>
-							<a href="civilian-camo-4-lg.jpg"><img src="civilian-camo-4-sm.jpg" width="128" height="128" /></a>
+							<a href="civilian-camo-1-lg.jpg"><img src="civilian-camo-1-sm.jpg" width="360" height="360" /></a>
+							<a href="civilian-camo-2-lg.jpg"><img src="civilian-camo-2-sm.jpg" width="360" height="360" /></a>
+							<a href="civilian-camo-3-lg.jpg"><img src="civilian-camo-3-sm.jpg" width="360" height="360" /></a>
+							<a href="civilian-camo-4-lg.jpg"><img src="civilian-camo-4-sm.jpg" width="360" height="360" /></a>
 						</div>
 					</section>
 				</div>	
