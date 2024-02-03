@@ -560,7 +560,11 @@ footer svg {
 			<header>
 				<div class="container">
 					<h1 class="visually-hidden">Civilian Camo</h1>
-					<img class="logo" src="logo.png" width="960" height="110" alt="" />
+					<picture>
+						<source srcset="logo.webp" type="image/webp">
+						<source srcset="logo.png" type="image/png">
+						<img src="logo.png" class="logo" width="960" height="110" alt="" />
+					</picture>
 				</div>
 			</header>
 			<main>
@@ -655,7 +659,11 @@ footer svg {
 					<section id="video">
 						<h2 class="visually-hidden">Play Video</h2>
 						<a class="video" href="https://www.youtube.com/watch?v=9PkwkNMF5aI">
-							<img src="video.jpg" width="1920" height="1080" alt="" />
+							<picture>
+								<source srcset="video.webp" type="image/webp">
+								<source srcset="video.jpg" type="image/jpg">
+								<img src="video.jpg" width="1920" height="1080" alt="" />
+							</picture>
 							<span class="video-btn"><i class="large-play-btn"><span class="visually-hidden">Play Video</span></i></span>
 						</a>
 					</section>
