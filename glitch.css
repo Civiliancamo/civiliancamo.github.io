@@ -67,9 +67,11 @@
 	left: calc(-1 * var(--gap-horizontal));
 	width: calc(100% + var(--gap-horizontal) * 2);
 	height: calc(100% + var(--gap-vertical) * 2);
-	background: url(background.jpg) no-repeat 50% 0;
-	background-color: var(--blend-color-1);
+	background-image: image-set( "background.webp" type("image/webp"),
+                             "background.jpg" type("image/jpeg") )
+	background-repeat: no-repeat;
 	background-size: cover;
+	background-color: var(--blend-color-1);
 	transform: translate3d(0,0,0);
 	background-blend-mode: var(--blend-mode-1);
 }
